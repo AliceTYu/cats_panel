@@ -1,0 +1,137 @@
+@import url(./reset.css);
+
+/* 
+"Fira Sans Condensed"
+"PT Sans"
+"Secular One"
+*/
+
+:root { 
+    --bg-color: #001C30;
+    --second-bg-color: #176B87;
+    --text-color: #ededed;
+    --main-color: #DAFFFB;
+    --second-main-color: #64CCC5;
+}
+
+.light__mode{
+    --bg-color: #FFF7F7;
+    --second-bg-color: #DADADA;
+    --text-color: #161D6F;
+    --second-main-color: #08FFC8;
+}
+
+body{
+    font-family: "Secular One", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ======================================== */
+.header {
+    padding: 2rem 0;
+    display: grid;
+    
+    grid-template: 'logo nav search' max-content / 1fr auto 0.3fr;
+    align-items: center;
+    justify-content: start;
+
+    overflow: hidden;
+}
+
+.header_logo{
+    grid-area: logo;
+    justify-self: end;
+    padding-right: 3rem;
+}
+
+.bx {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: all 0.5s ease-out;
+}
+
+.bxs-cat{
+    font-size: 2rem;
+}
+
+.header_menu {
+    grid-area: nav;
+    padding: 0 1rem;
+}
+
+.header_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header_item {
+    text-transform: uppercase;
+}
+
+.header_item:not(:last-child){
+    padding-right: 1rem;
+}
+
+.header_link {
+    color: var(--main-color);
+    transition: color 1s;
+    display: inline-block;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.header_link:hover{
+    color: var(--second-main-color);
+}
+
+.header_link::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4.4rem;
+    left: 0;
+    background-color: var(--second-main-color);
+    width: 100%;
+    height: 80%;
+    transition: all 1s;
+}
+
+.header_link:hover::after{
+    bottom: -2rem;
+}
+
+.header_search {
+    grid-area: search;
+    justify-self: end;
+}
+
+.bxs-sun {
+}
+.bxs-sun:hover{
+    color: var(--second-main-color);
+}
+
+/* ======================================== */
+.main {
+    flex: 1 1 auto;
+}
+
+/* ======================================== */
+.footer {
+}
+
