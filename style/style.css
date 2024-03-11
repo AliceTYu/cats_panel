@@ -47,7 +47,7 @@ img{
     padding: 1rem 0;
     display: grid;
     
-    grid-template: 'logo nav search' max-content / 1fr auto 0.3fr;
+    grid-template: '. logo nav search' max-content / 2fr 1fr 2.7fr 0.3fr;
     align-items: center;
     justify-content: start;
 
@@ -56,7 +56,6 @@ img{
 
 .header_logo{
     grid-area: logo;
-    justify-self: end;
     padding-right: 3rem;
 }
 
@@ -73,6 +72,7 @@ img{
 .header_menu {
     grid-area: nav;
     padding: 0 1rem;
+    margin-left: -1rem;
 }
 
 .header_list {
@@ -265,7 +265,7 @@ img{
 .common{
     grid-area: main_block;
     color: var(--bg-color);
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
